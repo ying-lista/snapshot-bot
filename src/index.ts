@@ -108,4 +108,8 @@ async function send(envelop: any) {
     }
 }
 
-botsFollow(0, 3)
+if (process.argv.length > 3) {
+    botsFollow(parseInt(process.argv[2]), parseInt(process.argv[3]))
+} else {
+    console.log('2 arguments expected!')
+}
